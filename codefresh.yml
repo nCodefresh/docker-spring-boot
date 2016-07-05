@@ -6,7 +6,7 @@ steps:
     revision: test-case-2
     repo: https://github.com/nCodefresh/docker-spring-boot.git
 
-  build-docker-spring-boot:
+  build-prj:
     type: build
     description: spring maven project
     image-name: ncodefresh/docker-spring-boot-yaml1

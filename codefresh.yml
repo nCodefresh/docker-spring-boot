@@ -4,7 +4,7 @@ steps:
   build-prj:
     type: build
     description: e2e use case
-    image-name: ncodefresh/yaml-env-vars-1
+    image-name: ncodefresh/${{IMAGE}}
     dockerfile: Dockerfile
     tag: latest
     environment:

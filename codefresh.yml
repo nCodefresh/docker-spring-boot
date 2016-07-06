@@ -4,13 +4,17 @@ steps:
   build-prj:
     type: build
     description: e2e use case
-    image-name: ncodefresh/${{IMAGE}}
+    image-name: ncodefresh/yaml-docker-spring-2-build
     dockerfile: Dockerfile
     tag: latest
-    environment:
-        - PORT=${{PORT}}
 
-  push-prj:
-    type: push
-    candidate: ${{build-prj}}
-    tag: ${{CF_BRANCH}}-${{CF_REVISION}}
+  clone-prj2:
+    type: git-clone
+    repo: https://github.com/codefresh-io/yaml-node-hello-world.git
+
+  build-prj2:
+    type: build
+    image-name: codefreshio/yaml-node-2-build
+    dockerfile: Dockerfile
+    tag: latest
+    working-directory: ${{clone-prj2}}

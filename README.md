@@ -1,5 +1,14 @@
-# docker-spring-boot
-https://spring.io/guides/gs/spring-boot-docker/
+# crontab
 
-## E2E use case: Build a service with dockerfile and parameter no-cache
-Expected result: Image should be created. Step build-prj should be passed.
+After performing following command will be created crontab with name which was specified for MAILTO
+```
+crontab cron-command
+```
+
+The content of the file `cron-command`
+```
+SHELL=/bin/bash
+MAILTO=<CRON_FILENAME>
+1,21 11-21 * * 0-4 sh /PATH_TO_FILE/cf-staging_docker-spring-boot.sh
+```
+The script `cf-staging_docker-spring-boot.sh` is performed every 5 min between 11am - 21pm, 5 days at week, begin with Sunday

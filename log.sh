@@ -1,9 +1,9 @@
 #!/bin/sh
 
 x=0
-while [ "$x" -lt 601 ]; do
+while [ "$x" -lt 301 ]; do
    x=$((x+1))
-   echo test log
+   #echo test log
    sleep 1
 done
 

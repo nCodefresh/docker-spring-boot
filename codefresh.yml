@@ -13,7 +13,7 @@ steps:
     dockerfile: Dockerfile
     working-directory: ${{clone-prj}}
     tag: latest
-    build-arguments: --no-cache
+    
   push-step:
     type: push
     credentials:
